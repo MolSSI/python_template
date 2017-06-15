@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MolSSI/python_template.svg?branch=master)](https://travis-ci.org/MolSSI/python_template)[![codecov](https://codecov.io/gh/MolSSI/python_template/branch/master/graph/badge.svg)](https://codecov.io/gh/MolSSI/python_template)
+
 # python_template
 This repository will provide a starting template for new Python-based projects.
 Here we pick a set of tools that we are familiar with; however, there are many
