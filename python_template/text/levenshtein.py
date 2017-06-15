@@ -35,6 +35,14 @@ def levenshtein(seq1, seq2):
     3
     """
 
+    # Do some type checking if desired
+    if not isinstance(seq1, str):
+        raise TypeError("levenshtein: first arguement must be a string, input type %s" % type(seq1))
+
+    if not isinstance(seq2, str):
+        raise TypeError("levenshtein: second arguement must be a string, input type %s" % type(seq2))
+
+    # Iterative "two row" levenshtein implementation
     oneago = None
     thisrow = list(range(1, len(seq2) + 1)) + [0]
     for x in range(len(seq1)):
@@ -44,4 +52,7 @@ def levenshtein(seq1, seq2):
             addcost = thisrow[y - 1] + 1
             subcost = oneago[y - 1] + (seq1[x] != seq2[y])
             thisrow[y] = min(delcost, addcost, subcost)
+
+    # Return
     return thisrow[len(seq2) - 1]
+
