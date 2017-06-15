@@ -28,10 +28,12 @@ def add(x, y):
     --------
 
     Adding two integers together:
+
     >>> add(5, 3)
     8
 
     An example of mixed input type:
+
     >>> add(5.0, 3)
     8.0
     """
