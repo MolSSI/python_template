@@ -1,3 +1,6 @@
+"""
+Contains several numerical related functions.
+"""
 
 def add(x, y):
     """The sum of two numbers.
@@ -9,7 +12,7 @@ def add(x, y):
         The first number to be added.
     y : (int, float)
         The second number to be added.
-    
+
     Returns
     -------
     ret : (int, float)
@@ -20,11 +23,11 @@ def add(x, y):
     Python will often convert the types of the input values. For example if the
     input of x and y are integers the result will be in an integer.  However if the
     input is a integer and a float a float will be returned.
-    
+
     Examples
     --------
-   
-    Adding two integers together: 
+
+    Adding two integers together:
     >>> add(5, 3)
     8
 
@@ -33,3 +36,4 @@ def add(x, y):
     8.0
     """
 
+    return x + y
