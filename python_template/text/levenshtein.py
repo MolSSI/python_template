@@ -24,8 +24,8 @@ def levenshtein(seq1, seq2):
     -----
     The Levenshtein distance between two words is the minimum number of
     single-character edits required to change one word into the other.  This is
-    often very useful for finding approximate string matches. For example throwing
-    an error with suggestions due to a keyword mismatch.
+    often very useful for finding approximate string matches. For example
+    throwing an error with suggestions due to a keyword mismatch.
 
     Examples
     --------
