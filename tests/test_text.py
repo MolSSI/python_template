@@ -18,16 +18,17 @@ def test_levenshtein_return_simple():
     assert ret == 1
 
 
-tests = [("", "", 0),               # Edge case!
+tests = [("", "", 0),                # Edge case!
          ("a", "ab", 1),
-         ("cat", "cat", 0),         # Identity
-         ("  ", "  a", 1),          # White space
+         ("cat", "cat", 0),          # Identity
+         ("  ", "  a", 1),           # White space
          ("  ", "  a", 1),
-         ("Saturday", "Sunday", 3), # Case sensitivity
+         ("Saturday", "Sunday", 3),  # Case sensitivity
          ("Saturday", "sunday", 4),
-         ("kitten", "sitting", 3),  # Random tests
-         ("mnemonic", "memory", 4), 
-        ]  
+         ("kitten", "sitting", 3),   # Random tests
+         ("mnemonic", "memory", 4),
+        ]
+
 
 @pytest.mark.parametrize("args", tests)
 def test_levenshtein_return(args):
@@ -41,7 +42,7 @@ def test_levenshtein_return(args):
     # Test the function
     ret = pt.text.levenshtein(seq1, seq2)
     assert ret == benchmark
-    
+
 
 def test_levenshtein_exception():
     """
@@ -53,4 +54,3 @@ def test_levenshtein_exception():
 
     with pytest.raises(TypeError):
         pt.text.levenshtein((5, 5), "cat")
-

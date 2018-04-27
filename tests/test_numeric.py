@@ -9,6 +9,7 @@ import pytest
 
 # Test python_template/text/levenstein
 
+
 def test_add_simple():
     """
     This is a simple test that checks the return value
@@ -17,6 +18,7 @@ def test_add_simple():
     assert 10 == pt.add(5, 5)
     assert 3 == pt.add(5, -2)
     assert 3 == pt.add(-2, 5)
+
 
 def test_add_return_type():
     """
